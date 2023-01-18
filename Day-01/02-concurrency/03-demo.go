@@ -6,21 +6,21 @@ import (
 	"time"
 )
 
-var wg sync.WaitGroup
-
 func main() {
+	wg := &sync.WaitGroup{}
 	wg.Add(1) //incrementing the counter by 1
-	go f1()   // scheduling the execution using the go scheduler
+	go f1(wg) // scheduling the execution using the go scheduler
 	f2()
 
 	wg.Wait() // block until the counter becomes 0
 }
 
-func f1() {
+func f1(wg *sync.WaitGroup) {
+	defer wg.Done() // decrementing the counter by 1
 	fmt.Println("f1 started")
 	time.Sleep(3 * time.Second)
 	fmt.Println("f1 completed")
-	wg.Done() // decrementing the counter by 1
+
 }
 
 func f2() {
