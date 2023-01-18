@@ -23,3 +23,9 @@ Refresher
 
     Concurrency
         Concurrency
+
+
+Higher Order Function
+    1. Assign functions as values to variables
+    2. Pass functions as arguments
+    3. Return functions as return values
