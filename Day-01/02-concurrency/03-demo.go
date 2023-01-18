@@ -20,7 +20,6 @@ func f1(wg *sync.WaitGroup) {
 	fmt.Println("f1 started")
 	time.Sleep(3 * time.Second)
 	fmt.Println("f1 completed")
-
 }
 
 func f2() {
