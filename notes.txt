@@ -1,0 +1,25 @@
+Magesh Kuppan
+
+Schedule:
+    Commence : T 
+    Tea Break : T + 1:30 Hrs (20 mins)
+    Lunch Break : T + 3:30 (Hrs) (1 Hr)
+    Tea Break : T + 6:00 (Hrs) (20 mins)
+
+Methodology:
+    * No powerpoints
+    * Problem solving
+
+Repo:
+    https://github.com/tkmagesh/Salesforce-Intermediate-Go-Jan-2023
+
+Day-01
+Refresher
+    Pointers
+    Error Handling
+    Structs & Methods
+    Interfaces
+    Higher Order Functions
+
+    Concurrency
+        Concurrency
