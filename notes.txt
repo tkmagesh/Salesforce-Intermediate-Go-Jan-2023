@@ -29,3 +29,21 @@ Higher Order Function
     1. Assign functions as values to variables
     2. Pass functions as arguments
     3. Return functions as return values
+
+
+RPC
+HTTP
+    Standard Library
+        Routing
+        Serialize / Deserialize JSON
+        Logging
+
+    Routing Libraries
+        Serialize / Deserialize JSON
+        Logging
+        
+    Web Frameworks
+
+    
+
+GRPC
