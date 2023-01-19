@@ -1,0 +1,19 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/todo                  --> todo-app/controllers.GetTodos (3 handlers)
+[GIN-debug] POST   /v1/todo                  --> todo-app/controllers.CreateATodo (3 handlers)
+[GIN-debug] GET    /v1/todo/:id              --> todo-app/controllers.GetATodo (3 handlers)
+[GIN-debug] PUT    /v1/todo/:id              --> todo-app/controllers.UpdateATodo (3 handlers)
+[GIN-debug] DELETE /v1/todo/:id              --> todo-app/controllers.DeleteATodo (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/19 - 21:49:51 | 200 |   14.341131ms |       127.0.0.1 | GET      "/v1/todo"
+[GIN] 2023/01/19 - 21:51:12 | 200 |    1.267805ms |       127.0.0.1 | GET      "/v1/todo/1"
+[GIN] 2023/01/19 - 21:52:08 | 200 |    8.680177ms |       127.0.0.1 | DELETE   "/v1/todo/1"
+[GIN] 2023/01/19 - 21:52:15 | 200 |     499.063µs |       127.0.0.1 | GET      "/v1/todo"
