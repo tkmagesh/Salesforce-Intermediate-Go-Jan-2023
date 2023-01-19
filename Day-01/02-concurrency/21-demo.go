@@ -8,25 +8,17 @@ import (
 )
 
 func main() {
-	// stopCh := make(chan bool)
-	stopCh := make(chan struct{})
-	fibCh := genFib(stopCh)
 
-	fmt.Println("Hit ENTER to stop...")
-	go func() {
-		fmt.Scanln()
-		// stopCh <- struct{}{}
-		close(stopCh)
-	}()
-
+	fibCh := genFib()
 	for fibNo := range fibCh {
 		fmt.Println(fibNo)
 	}
 	fmt.Println("Done")
 }
 
-func genFib(stop chan struct{}) <-chan int {
+func genFib() <-chan int {
 	ch := make(chan int)
+	stop := time.After(10 * time.Second)
 	go func() {
 		x, y := 0, 1
 	LOOP:
@@ -44,3 +36,14 @@ func genFib(stop chan struct{}) <-chan int {
 	}()
 	return ch
 }
+
+//use time.After() instead
+/*
+func timeout(d time.Duration) <-chan time.Time {
+	timeoutCh := make(chan time.Time)
+	go func() {
+		time.Sleep(d)
+		timeoutCh <- time.Now()
+	}()
+	return timeoutCh
+} */
