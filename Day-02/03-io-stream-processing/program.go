@@ -21,6 +21,7 @@ func main() {
 	evenCh, oddCh := Splitter(dataCh)
 	evenSumCh := Sum(evenCh)
 	oddSumCh := Sum(oddCh)
+
 	doneCh := Merger(evenSumCh, oddSumCh)
 
 	wg.Wait()
