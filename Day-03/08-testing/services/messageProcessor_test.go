@@ -1,9 +1,12 @@
 package services
 
-import "testing"
+import (
+	"testing"
+	mocks "testing-demo/mocks/services"
+)
 
 /* implement MessageService (interface) */
-type MockMessageService struct {
+/* type MockMessageService struct {
 	sendCalled    bool
 	messageToSend string
 	returnValue   error
@@ -55,5 +58,26 @@ func TestMessageProcessor_Process(t *testing.T) {
 		})
 	}
 }
-
+*/
 /* Create a test to test the behavior of MessageProcessor.Process() when the MessageService.Send() returns an error */
+
+func Test_MessageProcesser_Sends_Message_To_MessageService(t *testing.T) {
+	// arrange
+	testMessage := "test message"
+	mockMessageService := mocks.NewMessageService(t)
+
+	//configure the mock
+	mockMessageService.On("Send", testMessage).Return(nil)
+	sut := &MessageProcessor{
+		messageService: mockMessageService,
+	}
+
+	// act
+	retVal := sut.Process(testMessage)
+
+	// assert
+	if retVal != true {
+		t.Error("Not returning true when the Service return nil")
+	}
+	mockMessageService.AssertExpectations(t)
+}

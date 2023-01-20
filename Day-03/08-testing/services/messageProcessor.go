@@ -17,7 +17,7 @@ func (mp *MessageProcessor) Process(msg string) bool {
 	*/
 
 	if err := mp.messageService.Send(msg); err != nil {
-		return false
+		return true
 	}
-	return true
+	return false
 }

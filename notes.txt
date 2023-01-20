@@ -96,3 +96,10 @@ Testing
 
     Install gotest
         go install https://github.com/rakyll/gotest
+
+    
+    To install mockery
+        go install github.com/vektra/mockery/v2@latest
+
+    To generate mocks
+        mockery --all --keeptree
