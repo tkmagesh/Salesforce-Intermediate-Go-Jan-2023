@@ -79,3 +79,16 @@ func TestIsPrime(t *testing.T) {
 	}
 }
 */
+
+/* Benckmarks */
+func Benchmark_IsPrime_11(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		IsPrime(11)
+	}
+}
+
+func Benchmark_GetPrimes(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		GetPrimes(3, 20)
+	}
+}

@@ -1,0 +1,15 @@
+docker run --rm -it --name go-test -v $PWD:/go/src/test-app golang
+
+go install github.com/go-delve/delve/cmd/dlv@latest'
+
+
+go build program.go
+
+GOTRACEBACK=crash ./program
+
+dlv core program core
+
+dlv commands:
+    bt
+    frame 9
+    locals

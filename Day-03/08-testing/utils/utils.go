@@ -11,3 +11,14 @@ func IsPrime(no int) bool {
 	}
 	return true
 }
+
+func GetPrimes(start, end int) []int {
+	// var primes []int
+	primes := make([]int, 0, 20)
+	for i := start; i <= end; i++ {
+		if IsPrime(i) {
+			primes = append(primes, i)
+		}
+	}
+	return primes
+}

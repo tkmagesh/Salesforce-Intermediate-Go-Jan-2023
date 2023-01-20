@@ -103,3 +103,12 @@ Testing
 
     To generate mocks
         mockery --all --keeptree
+
+    go test
+    go test -run=<test_name>
+    go test ./...
+    
+Benchmarking
+    go test -bench=.
+    go test -bench=. -benchtime=5s
+    go test -bench=. -cpu=4
