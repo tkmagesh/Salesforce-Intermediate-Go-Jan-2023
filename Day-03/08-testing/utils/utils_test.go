@@ -4,10 +4,8 @@ import (
 	"testing"
 )
 
-/*
 func TestIsPrime_11(t *testing.T) {
-	t.Skip()
-	// fmt.Println("Testing IsPrime : 11")
+	t.Parallel()
 	// arrange
 	no := 11
 	expectedResult := true
@@ -18,8 +16,8 @@ func TestIsPrime_11(t *testing.T) {
 	// assert
 	if actualResult != expectedResult {
 
-			// t.Logf("IsPrime() : arg - %d, expected : %t but go %t\n", no, expectedResult, actualResult)
-			// t.Fail()
+		// t.Logf("IsPrime() : arg - %d, expected : %t but go %t\n", no, expectedResult, actualResult)
+		// t.Fail()
 
 		t.Errorf("IsPrime() : arg - %d, expected : %t but got %t\n", no, expectedResult, actualResult)
 		// t.Fatalf("IsPrime() : arg - %d, expected : %t but got %t\n", no, expectedResult, actualResult)
@@ -27,7 +25,7 @@ func TestIsPrime_11(t *testing.T) {
 }
 
 func TestIsPrime_13(t *testing.T) {
-	t.Skip()
+	t.Parallel()
 	// fmt.Println("Testing IsPrime : 11")
 	// arrange
 	no := 13
@@ -39,14 +37,13 @@ func TestIsPrime_13(t *testing.T) {
 	// assert
 	if actualResult != expectedResult {
 
-			// t.Logf("IsPrime() : arg - %d, expected : %t but go %t\n", no, expectedResult, actualResult)
-			// t.Fail()
+		// t.Logf("IsPrime() : arg - %d, expected : %t but go %t\n", no, expectedResult, actualResult)
+		// t.Fail()
 
 		t.Errorf("IsPrime() : arg - %d, expected : %t but got %t\n", no, expectedResult, actualResult)
 		// t.Fatalf("IsPrime() : arg - %d, expected : %t but got %t\n", no, expectedResult, actualResult)
 	}
 }
-*/
 
 /*
 type PrimeTestData struct {
@@ -57,6 +54,7 @@ type PrimeTestData struct {
 }
 */
 
+/*
 func TestIsPrime(t *testing.T) {
 	testData := []struct {
 		name           string
@@ -80,3 +78,4 @@ func TestIsPrime(t *testing.T) {
 		})
 	}
 }
+*/
