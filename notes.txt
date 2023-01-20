@@ -47,3 +47,38 @@ HTTP
     
 
 GRPC
+    Protocol Buffers
+        Schema shared between the client and server
+        ONLY send and receive data
+    Communication Patterns
+        Request / Response
+        Client Streaming
+        Server Streaming
+        Bidirectional Streaming
+
+    1. Protocol Buffers Compiler (protoc tool)
+            Windows:
+                Download the file, extract and keep in a folder (PATH) accessble through the command line
+                https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-win64.zip
+            Mac:
+                brew install protobuf
+
+            Verification:
+                protoc --version
+
+        2. Go plugins
+            go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+            go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+
+    TODO:
+        Protobuf Schema
+            Service Contract
+            Operation Contract
+            Data Contract
+
+        Generate the Proxy & Stub
+
+        Implementing the Service
+        Host the Service
+
+

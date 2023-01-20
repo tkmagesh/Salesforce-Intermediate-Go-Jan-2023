@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package proto;
+
+//go package in which the proxy & stub code generated to belong to
+option go_package="/proto";
+
+/* data contracts */
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddResponse{
+    int32 result = 1;
+}
+
+/* service contract */
+service AppService{
+
+    /* operations contracts */
+    rpc Add (AddRequest) returns (AddResponse);
+
+}
